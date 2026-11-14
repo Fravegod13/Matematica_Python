@@ -51,7 +51,7 @@ LUNGHEZZA_STORIA = 2000           # quanti punti "ricordiamo" per disegnare le c
 # ---------------------------------------------------------------
 def derivate(R, F, a, b, c, d):
     """Di quanto cambiano conigli e volpi in questo istante."""
-    dR = a * R - b * R * F
+    dR = a * R * (1-R/100)- b * R * F
     dF = c * R * F - d * F
     return dR, dF
 
@@ -59,7 +59,11 @@ def derivate(R, F, a, b, c, d):
 def passo_rk4(R, F, a, b, c, d, dt):
     # "Runge-Kutta 4": guardiamo la direzione del cambiamento in 4
     # punti vicini e le combiniamo, per fare un passo molto piu'
+<<<<<<< HEAD
     # preciso di un semplice "R = R + dR*dt".    
+=======
+    # preciso di un semplice "R = R + dR*dt".
+>>>>>>> 8890b7c4307547016698942cd59e23b18a9f599f
     k1R, k1F = derivate(R, F, a, b, c, d)
     k2R, k2F = derivate(R + dt / 2 * k1R, F + dt / 2 * k1F, a, b, c, d)
     k3R, k3F = derivate(R + dt / 2 * k2R, F + dt / 2 * k2F, a, b, c, d)
