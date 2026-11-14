@@ -97,8 +97,8 @@ N_volpi_INIZIALE = 10
 CONIGLI_MASSIMI = 300   # limite per non rallentare troppo il programma
 volpi_MASSIME = 200
 
-CONIGLI_MINIMI = 2      # non facciamo mai estinguere del tutto le popolazioni
-volpi_MINIME = 2
+CONIGLI_MINIMI = 0      # non facciamo mai estinguere del tutto le popolazioni
+volpi_MINIME = 0
 
 RAGGIO_INCONTRO = 20    # distanza (in pixel) entro cui due personaggi "si incontrano"
 
